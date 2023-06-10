@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "navbar navbar navbar navbar"
+    "header header header header"
+    "aside section-products section-products section-products"
+    "footer footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr; 
+    gap: 0px;
+    height: 100vh;
+    grid-template-rows: 1fr 1fr 4fr 0.5fr;
+}
+.navbar{
+    grid-area: navbar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 15px;
+}
+.navbar-brand img{
+    padding-left: 7vh;
+}
+.nav-link{
+    padding-left: 15px;
+    color: white;
+}
+.back-color{
+    background-color: #042523
+}
+.header{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    padding-left: 1vh;
+    padding-right: 1vh;
+    background-image: url(../img/eternal-banner.png);
+    background-size: cover;
+}
+.aside{
+    grid-area: aside;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 1em;
+    padding-top: 5vh;
+}
+.section-products{
+    grid-area: section-products;
+    display: grid;
+    background-color: antiquewhite;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 4fr));
+    justify-items: center;
+    gap: 10px;
+    padding: 17px;
+}
+.section-card{
+    width: 300px;
+    height: 380px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 17px;
+    border: 2px solid rgb(0, 0, 0);
+}
+.section-image{
+    width: 100%;
+    height: 200px;
+}
+.aside-title{
+    color: black;
+    font-size: 20px;
+}
+.aside-category{
+    color: black;
+}
+.footer{
+    display: flex;
+    grid-area: footer;
+    justify-content: center;
+    align-items: center;
+    background-color: #042523;
+    color: white;
+    width: 100%;
+}
